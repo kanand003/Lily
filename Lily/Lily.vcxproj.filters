@@ -27,9 +27,15 @@
     <ClInclude Include="src\Lily\EntryPoint.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="src\Lily\Log.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Lily\Application.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Lily\Log.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
