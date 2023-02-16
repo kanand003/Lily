@@ -9,3 +9,5 @@
 #else
 	#error Lily only supports Windows Platform
 #endif // LY_BUILD_DLL
+
+#define BIT(x) (1<<x)
