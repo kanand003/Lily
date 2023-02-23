@@ -1,4 +1,8 @@
+#include "hzpch.h"
+
 #include "Application.h"
+#include "Events/ApplicationEvent.h"
+#include "Lily/Log.h"
 
 namespace Lily
 {
@@ -12,6 +16,16 @@ namespace Lily
 	}
 	void Application::Run()
 	{
+		WindowResizeEvent e(1280, 720);
+		if (e.IsInCategory(EventCategoryApplication))
+		{
+			LY_CORE_TRACE(e);
+		}
+		if (e.IsInCategory(EventCategoryInput))
+		{
+			LY_CORE_TRACE(e);
+		}
+		
 		while (true);
 	}
 }

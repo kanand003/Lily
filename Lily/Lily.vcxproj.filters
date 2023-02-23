@@ -1,11 +1,26 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
+    <Filter Include="Events">
+      <UniqueIdentifier>{3A8963B1-262B-8E87-0FE6-A1DBFB2615D8}</UniqueIdentifier>
+    </Filter>
     <Filter Include="Lily">
       <UniqueIdentifier>{5F89887C-4BC0-890D-F4AC-6F10E0C2050F}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="src\Events\ApplicationEvent.h">
+      <Filter>Events</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Events\Event.h">
+      <Filter>Events</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Events\KeyEvent.h">
+      <Filter>Events</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Events\MouseEvent.h">
+      <Filter>Events</Filter>
+    </ClInclude>
     <ClInclude Include="src\Lily.h" />
     <ClInclude Include="src\Lily\Application.h">
       <Filter>Lily</Filter>
@@ -19,6 +34,7 @@
     <ClInclude Include="src\Lily\Log.h">
       <Filter>Lily</Filter>
     </ClInclude>
+    <ClInclude Include="src\hzpch.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Lily\Application.cpp">
@@ -27,5 +43,6 @@
     <ClCompile Include="src\Lily\Log.cpp">
       <Filter>Lily</Filter>
     </ClCompile>
+    <ClCompile Include="src\hzpch.cpp" />
   </ItemGroup>
 </Project>

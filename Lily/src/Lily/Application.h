@@ -1,6 +1,7 @@
 #pragma once
 #include "Core.h"
 
+
 namespace Lily
 {
 	class LILY_API Application
