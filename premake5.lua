@@ -10,6 +10,12 @@ workspace "Lily"
 
 outputdir="%{cfg.buildcfg}-%{cfg.system}-%{cfg.architecture}"
 
+-- Include Directories relative to root folder(solution directory)
+IncludeDir = {}
+IncludeDir["GLFW"] = "Lily/vendor/GLFW/include"
+
+include "Lily/vendor/GLFW"
+
 project "Lily"
 	location "Lily"
 	kind "SharedLib"
@@ -29,8 +35,16 @@ project "Lily"
 	includedirs
 	{
 		"%{prj.name}/src",
-		"%{prj.name}/vendor/spdlog/include"
+		"%{prj.name}/vendor/spdlog/include",
+		"%{IncludeDir.GLFW}"
 	}
+
+	links
+	{
+		"GLFW",
+		"opengl32.lib"
+	}
+
 	filter	"system:windows"
 	
 		cppdialect "C++17"
