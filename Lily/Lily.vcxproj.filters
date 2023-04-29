@@ -9,16 +9,16 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="src\Events\ApplicationEvent.h">
+    <ClInclude Include="src\Lily\Events\ApplicationEvent.h">
       <Filter>Events</Filter>
     </ClInclude>
-    <ClInclude Include="src\Events\Event.h">
+    <ClInclude Include="src\Lily\Events\Event.h">
       <Filter>Events</Filter>
     </ClInclude>
-    <ClInclude Include="src\Events\KeyEvent.h">
+    <ClInclude Include="src\Lily\Events\KeyEvent.h">
       <Filter>Events</Filter>
     </ClInclude>
-    <ClInclude Include="src\Events\MouseEvent.h">
+    <ClInclude Include="src\Lily\Events\MouseEvent.h">
       <Filter>Events</Filter>
     </ClInclude>
     <ClInclude Include="src\Lily.h" />
@@ -35,6 +35,8 @@
       <Filter>Lily</Filter>
     </ClInclude>
     <ClInclude Include="src\hzpch.h" />
+    <ClInclude Include="src\Platform\Windows\WindowsWindow.h" />
+    <ClInclude Include="src\Lily\Window.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Lily\Application.cpp">
@@ -44,5 +46,6 @@
       <Filter>Lily</Filter>
     </ClCompile>
     <ClCompile Include="src\hzpch.cpp" />
+    <ClCompile Include="src\Platform\Windows\WindowsWindow.cpp" />
   </ItemGroup>
 </Project>
