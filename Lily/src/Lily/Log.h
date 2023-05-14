@@ -31,8 +31,8 @@ namespace Lily
 
 //Client Log Macros
 
-#define LY_CORE_TRACE(...)::Lily::Log::GetClientLogger()->trace(__VA_ARGS__)
-#define LY_CORE_INFO(...)::Lily::Log::GetClientLogger()->info(__VA_ARGS__)
-#define LY_CORE_WARN(...)::Lily::Log::GetClientLogger()->warn(__VA_ARGS__)
-#define LY_CORE_ERROR(...)::Lily::Log::GetClientLogger()->error(__VA_ARGS__)
-#define LY_CORE_FATAL(...)::Lily::Log::GetClientLogger()->critical(__VA_ARGS__)
+#define LY_TRACE(...)::Lily::Log::GetClientLogger()->trace(__VA_ARGS__)
+#define LY_INFO(...)::Lily::Log::GetClientLogger()->info(__VA_ARGS__)
+#define LY_WARN(...)::Lily::Log::GetClientLogger()->warn(__VA_ARGS__)
+#define LY_ERROR(...)::Lily::Log::GetClientLogger()->error(__VA_ARGS__)
+#define LY_FATAL(...)::Lily::Log::GetClientLogger()->critical(__VA_ARGS__)

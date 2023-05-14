@@ -37,6 +37,8 @@
     <ClInclude Include="src\hzpch.h" />
     <ClInclude Include="src\Platform\Windows\WindowsWindow.h" />
     <ClInclude Include="src\Lily\Window.h" />
+    <ClInclude Include="src\Lily\Layer.h" />
+    <ClInclude Include="src\Lily\LayerStack.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Lily\Application.cpp">
@@ -47,5 +49,7 @@
     </ClCompile>
     <ClCompile Include="src\hzpch.cpp" />
     <ClCompile Include="src\Platform\Windows\WindowsWindow.cpp" />
+    <ClCompile Include="src\Lily\Layer.cpp" />
+    <ClCompile Include="src\Lily\LayerStack.cpp" />
   </ItemGroup>
 </Project>

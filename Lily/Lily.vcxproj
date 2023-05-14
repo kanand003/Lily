@@ -160,6 +160,8 @@
     <ClInclude Include="src\Lily\Application.h" />
     <ClInclude Include="src\Lily\Core.h" />
     <ClInclude Include="src\Lily\EntryPoint.h" />
+    <ClInclude Include="src\Lily\Layer.h" />
+    <ClInclude Include="src\Lily\LayerStack.h" />
     <ClInclude Include="src\Lily\Log.h" />
     <ClInclude Include="src\hzpch.h" />
     <ClInclude Include="src\Lily\Window.h" />
@@ -167,6 +169,8 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Lily\Application.cpp" />
+    <ClCompile Include="src\Lily\Layer.cpp" />
+    <ClCompile Include="src\Lily\LayerStack.cpp" />
     <ClCompile Include="src\Lily\Log.cpp" />
     <ClCompile Include="src\hzpch.cpp">
       <PrecompiledHeader>Create</PrecompiledHeader>
