@@ -3,8 +3,8 @@
 #include "Application.h"
 #include "Lily/Log.h"
 
-#include "GLFW/glfw3.h"
-
+//#include "GLFW/glfw3.h"
+#include "Glad/glad.h"
 namespace Lily
 {
 #define BIND_EVENT_FN(x) std::bind(&Application::x, this, std::placeholders::_1)

@@ -5,6 +5,8 @@
 #include "Lily/Events/MouseEvent.h"
 #include "Lily/Events/KeyEvent.h"
 
+#include "glad/glad.h"
+
 namespace Lily {
 	static bool s_GLFWInitialized = false;
 
@@ -49,6 +51,8 @@ namespace Lily {
 		glfwSetWindowUserPointer(m_Window, &m_Data);
 		SetVSync(true);
 
+		int status = gladLoadGLLoader((GLADloadproc)glfwGetProcAddress);
+		LY_CORE_ASSERT(status, "Failed to initialize Glad");
 		//Set GLFW Callbacks
 		glfwSetWindowSizeCallback(m_Window, [](GLFWwindow* window, int width, int height)
 		{

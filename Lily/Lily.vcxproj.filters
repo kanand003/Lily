@@ -1,26 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <Filter Include="Events">
-      <UniqueIdentifier>{3A8963B1-262B-8E87-0FE6-A1DBFB2615D8}</UniqueIdentifier>
-    </Filter>
     <Filter Include="Lily">
       <UniqueIdentifier>{5F89887C-4BC0-890D-F4AC-6F10E0C2050F}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Lily\Events">
+      <UniqueIdentifier>{631458C6-CFC9-D0BB-58BE-CA92C472C7BF}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Platform">
+      <UniqueIdentifier>{2AC788B4-1694-E3BF-3FAD-D1672BD9184E}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Platform\Windows">
+      <UniqueIdentifier>{64FBD71A-50F4-F66C-7926-DCF1657ED678}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="src\Lily\Events\ApplicationEvent.h">
-      <Filter>Events</Filter>
-    </ClInclude>
-    <ClInclude Include="src\Lily\Events\Event.h">
-      <Filter>Events</Filter>
-    </ClInclude>
-    <ClInclude Include="src\Lily\Events\KeyEvent.h">
-      <Filter>Events</Filter>
-    </ClInclude>
-    <ClInclude Include="src\Lily\Events\MouseEvent.h">
-      <Filter>Events</Filter>
-    </ClInclude>
     <ClInclude Include="src\Lily.h" />
     <ClInclude Include="src\Lily\Application.h">
       <Filter>Lily</Filter>
@@ -31,25 +25,51 @@
     <ClInclude Include="src\Lily\EntryPoint.h">
       <Filter>Lily</Filter>
     </ClInclude>
+    <ClInclude Include="src\Lily\Events\ApplicationEvent.h">
+      <Filter>Lily\Events</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Lily\Events\Event.h">
+      <Filter>Lily\Events</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Lily\Events\KeyEvent.h">
+      <Filter>Lily\Events</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Lily\Events\MouseEvent.h">
+      <Filter>Lily\Events</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Lily\Layer.h">
+      <Filter>Lily</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Lily\LayerStack.h">
+      <Filter>Lily</Filter>
+    </ClInclude>
     <ClInclude Include="src\Lily\Log.h">
       <Filter>Lily</Filter>
     </ClInclude>
+    <ClInclude Include="src\Lily\Window.h">
+      <Filter>Lily</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Platform\Windows\WindowsWindow.h">
+      <Filter>Platform\Windows</Filter>
+    </ClInclude>
     <ClInclude Include="src\hzpch.h" />
-    <ClInclude Include="src\Platform\Windows\WindowsWindow.h" />
-    <ClInclude Include="src\Lily\Window.h" />
-    <ClInclude Include="src\Lily\Layer.h" />
-    <ClInclude Include="src\Lily\LayerStack.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Lily\Application.cpp">
       <Filter>Lily</Filter>
     </ClCompile>
+    <ClCompile Include="src\Lily\Layer.cpp">
+      <Filter>Lily</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Lily\LayerStack.cpp">
+      <Filter>Lily</Filter>
+    </ClCompile>
     <ClCompile Include="src\Lily\Log.cpp">
       <Filter>Lily</Filter>
     </ClCompile>
+    <ClCompile Include="src\Platform\Windows\WindowsWindow.cpp">
+      <Filter>Platform\Windows</Filter>
+    </ClCompile>
     <ClCompile Include="src\hzpch.cpp" />
-    <ClCompile Include="src\Platform\Windows\WindowsWindow.cpp" />
-    <ClCompile Include="src\Lily\Layer.cpp" />
-    <ClCompile Include="src\Lily\LayerStack.cpp" />
   </ItemGroup>
 </Project>
