@@ -13,8 +13,10 @@ outputdir="%{cfg.buildcfg}-%{cfg.system}-%{cfg.architecture}"
 -- Include Directories relative to root folder(solution directory)
 IncludeDir = {}
 IncludeDir["GLFW"] = "Lily/vendor/GLFW/include"
+IncludeDir["Glad"] = "Lily/vendor/Glad/include"
 
 include "Lily/vendor/GLFW"
+include "Lily/vendor/Glad"
 
 project "Lily"
 	location "Lily"
@@ -36,12 +38,14 @@ project "Lily"
 	{
 		"%{prj.name}/src",
 		"%{prj.name}/vendor/spdlog/include",
-		"%{IncludeDir.GLFW}"
+		"%{IncludeDir.GLFW}",
+		"%{IncludeDir.Glad}"
 	}
 
 	links
 	{
 		"GLFW",
+		"Glad",
 		"opengl32.lib"
 	}
 
@@ -54,7 +58,8 @@ project "Lily"
 		defines
 		{
 			"LY_PLATFORM_WINDOWS",
-			"LY_BUILD_DLL"
+			"LY_BUILD_DLL",
+			"GLFW_INCLUDE_NONE"
 		}
 		postbuildcommands
 		{
