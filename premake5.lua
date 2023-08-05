@@ -14,7 +14,7 @@ outputdir="%{cfg.buildcfg}-%{cfg.system}-%{cfg.architecture}"
 IncludeDir = {}
 IncludeDir["GLFW"] = "Lily/vendor/GLFW/include"
 IncludeDir["Glad"] = "Lily/vendor/Glad/include"
-IncludeDir["imgui"] = "Lily/vendor/imgui/include"
+IncludeDir["imgui"] = "Lily/vendor/imgui"
 
 include "Lily/vendor/GLFW"
 include "Lily/vendor/Glad"

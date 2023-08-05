@@ -4,6 +4,8 @@
 #include "Lily/Layer.h"
 #include "Lily/Log.h"
 
+#include "Lily/ImGui/ImguiLayer.h"
+
 //-----------------Entry Point----------------------
-#include "Lily//EntryPoint.h"
+#include "Lily/EntryPoint.h"
 //---------------------------------------
