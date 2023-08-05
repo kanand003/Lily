@@ -7,8 +7,14 @@
     <Filter Include="Lily\Events">
       <UniqueIdentifier>{631458C6-CFC9-D0BB-58BE-CA92C472C7BF}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Lily\ImGui">
+      <UniqueIdentifier>{C949F0B0-B501-32FE-1E09-0B5A0AE0CCEE}</UniqueIdentifier>
+    </Filter>
     <Filter Include="Platform">
       <UniqueIdentifier>{2AC788B4-1694-E3BF-3FAD-D1672BD9184E}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Platform\OpenGL">
+      <UniqueIdentifier>{1E7D2C1D-8A08-9AE1-9319-1DD6FF23F6E1}</UniqueIdentifier>
     </Filter>
     <Filter Include="Platform\Windows">
       <UniqueIdentifier>{64FBD71A-50F4-F66C-7926-DCF1657ED678}</UniqueIdentifier>
@@ -37,6 +43,9 @@
     <ClInclude Include="src\Lily\Events\MouseEvent.h">
       <Filter>Lily\Events</Filter>
     </ClInclude>
+    <ClInclude Include="src\Lily\ImGui\ImguiLayer.h">
+      <Filter>Lily\ImGui</Filter>
+    </ClInclude>
     <ClInclude Include="src\Lily\Layer.h">
       <Filter>Lily</Filter>
     </ClInclude>
@@ -49,6 +58,9 @@
     <ClInclude Include="src\Lily\Window.h">
       <Filter>Lily</Filter>
     </ClInclude>
+    <ClInclude Include="src\Platform\OpenGL\ImGuiOpenGLRenderer.h">
+      <Filter>Platform\OpenGL</Filter>
+    </ClInclude>
     <ClInclude Include="src\Platform\Windows\WindowsWindow.h">
       <Filter>Platform\Windows</Filter>
     </ClInclude>
@@ -58,6 +70,9 @@
     <ClCompile Include="src\Lily\Application.cpp">
       <Filter>Lily</Filter>
     </ClCompile>
+    <ClCompile Include="src\Lily\ImGui\ImguiLayer.cpp">
+      <Filter>Lily\ImGui</Filter>
+    </ClCompile>
     <ClCompile Include="src\Lily\Layer.cpp">
       <Filter>Lily</Filter>
     </ClCompile>
@@ -66,6 +81,9 @@
     </ClCompile>
     <ClCompile Include="src\Lily\Log.cpp">
       <Filter>Lily</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Platform\OpenGL\ImGuiOpenGLRenderer.cpp">
+      <Filter>Platform\OpenGL</Filter>
     </ClCompile>
     <ClCompile Include="src\Platform\Windows\WindowsWindow.cpp">
       <Filter>Platform\Windows</Filter>
