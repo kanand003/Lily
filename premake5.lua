@@ -16,14 +16,18 @@ IncludeDir["GLFW"] = "Lily/vendor/GLFW/include"
 IncludeDir["Glad"] = "Lily/vendor/Glad/include"
 IncludeDir["imgui"] = "Lily/vendor/imgui"
 
-include "Lily/vendor/GLFW"
-include "Lily/vendor/Glad"
-include "Lily/vendor/imgui"
+group "Dependencies"
+	include "Lily/vendor/GLFW"
+	include "Lily/vendor/Glad"
+	include "Lily/vendor/imgui"
+
+group ""
 
 project "Lily"
 	location "Lily"
 	kind "SharedLib"
 	language"C++"
+	staticruntime "off"
 
 	targetdir ("bin/" .. outputdir .. "/%{prj.name}")
 	objdir ("bin-int/" .. outputdir .. "/%{prj.name}")
@@ -56,7 +60,6 @@ project "Lily"
 	filter	"system:windows"
 	
 		cppdialect "C++17"
-		staticruntime "On"
 		systemversion "latest"
 		
 		defines
@@ -67,25 +70,26 @@ project "Lily"
 		}
 		postbuildcommands
 		{
-			("{COPY} %{cfg.buildtarget.relpath} ../bin/" .. outputdir .. "/Sandbox")
+			("{COPY} %{cfg.buildtarget.relpath} \"../bin/" .. outputdir .. "/Sandbox/\"")
 		}
 	filter "configurations:Debug"
 		defines "LY_DEBUG"
-		buildoptions "/MDd"
+		runtime "Debug"
 		symbols "On"
 	filter "configurations:Release"
 		defines "LY_RELEASE"
-		buildoptions "/MD"
+		runtime "Release"
 		optimize "On"
 	filter "configurations:Dist"
 		defines "LY_DIST"
-		buildoptions "/MD"
+		runtime "Release"
 		optimize "On"
 
 project "Sandbox"
 	location "Sandbox"
 	kind "ConsoleApp"
 	language"C++"
+	staticruntime "off"
 
 	targetdir ("bin/" .. outputdir .. "/%{prj.name}")
 	objdir ("bin-int/" .. outputdir .. "/%{prj.name}")
@@ -107,7 +111,6 @@ project "Sandbox"
 	filter	"system:windows"
 	
 		cppdialect "C++17"
-		staticruntime "On"
 		systemversion "latest"
 		
 		defines
@@ -116,13 +119,13 @@ project "Sandbox"
 		}
 		filter "configurations:Debug"
 			defines "LY_DEBUG"
-			buildoptions "/MDd"
+			runtime "Debug"
 			symbols "On"
 		filter "configurations:Release"
 			defines "LY_RELEASE"
-			buildoptions "/MD"
+			runtime "Release"
 			optimize "On"
 		filter "configurations:Dist"
 			defines "LY_DIST"
-			buildoptions "/MD"
+			runtime "Release"
 			optimize "On"
