@@ -161,11 +161,15 @@
     <ClInclude Include="src\Lily\Events\KeyEvent.h" />
     <ClInclude Include="src\Lily\Events\MouseEvent.h" />
     <ClInclude Include="src\Lily\ImGui\ImguiLayer.h" />
+    <ClInclude Include="src\Lily\Input.h" />
+    <ClInclude Include="src\Lily\KeyCodes.h" />
     <ClInclude Include="src\Lily\Layer.h" />
     <ClInclude Include="src\Lily\LayerStack.h" />
     <ClInclude Include="src\Lily\Log.h" />
+    <ClInclude Include="src\Lily\MouseButtonCodes.h" />
     <ClInclude Include="src\Lily\Window.h" />
     <ClInclude Include="src\Platform\OpenGL\ImGuiOpenGLRenderer.h" />
+    <ClInclude Include="src\Platform\Windows\WindowsInput.h" />
     <ClInclude Include="src\Platform\Windows\WindowsWindow.h" />
     <ClInclude Include="src\hzpch.h" />
   </ItemGroup>
@@ -176,6 +180,7 @@
     <ClCompile Include="src\Lily\LayerStack.cpp" />
     <ClCompile Include="src\Lily\Log.cpp" />
     <ClCompile Include="src\Platform\OpenGL\ImGuiOpenGLRenderer.cpp" />
+    <ClCompile Include="src\Platform\Windows\WindowsInput.cpp" />
     <ClCompile Include="src\Platform\Windows\WindowsWindow.cpp" />
     <ClCompile Include="src\hzpch.cpp">
       <PrecompiledHeader>Create</PrecompiledHeader>
