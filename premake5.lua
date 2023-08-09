@@ -15,6 +15,7 @@ IncludeDir = {}
 IncludeDir["GLFW"] = "Lily/vendor/GLFW/include"
 IncludeDir["Glad"] = "Lily/vendor/Glad/include"
 IncludeDir["imgui"] = "Lily/vendor/imgui"
+IncludeDir["glm"] = "Lily/vendor/glm"
 
 group "Dependencies"
 	include "Lily/vendor/GLFW"
@@ -38,7 +39,9 @@ project "Lily"
 	files
 	{
 		"%{prj.name}/src/**.h",
-		"%{prj.name}/src/**.cpp"
+		"%{prj.name}/src/**.cpp",
+		"%{prj.name}/vendor/glm/glm/**.hpp",
+		"%{prj.name}/vendor/glm/glm/**.inl",
 	}
 	includedirs
 	{
@@ -46,7 +49,8 @@ project "Lily"
 		"%{prj.name}/vendor/spdlog/include",
 		"%{IncludeDir.GLFW}",
 		"%{IncludeDir.Glad}",
-		"%{IncludeDir.imgui}"
+		"%{IncludeDir.imgui}",
+		"%{IncludeDir.glm}"
 	}
 
 	links
@@ -102,7 +106,8 @@ project "Sandbox"
 	includedirs
 	{
 		"Lily/vendor/spdlog/include",
-		"Lily/src"
+		"Lily/src",
+		"%{IncludeDir.glm}"
 	}
 	links
 	{
