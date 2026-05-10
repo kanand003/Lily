@@ -5,3 +5,8 @@ bin-int/
 
 #Files
 *.user
+
+# Local AI/tooling docs
+CLAUDE.md
+ARCHITECTURE.md
+ROADMAP.md

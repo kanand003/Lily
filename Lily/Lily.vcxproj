@@ -55,22 +55,22 @@
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <LinkIncremental>true</LinkIncremental>
-    <OutDir>..\bin\Debug-windows-x86_64\Lily\</OutDir>
-    <IntDir>..\bin-int\Debug-windows-x86_64\Lily\</IntDir>
+    <OutDir>$(ProjectDir)..\bin\Debug-windows-x86_64\Lily\</OutDir>
+    <IntDir>$(ProjectDir)..\bin-int\Debug-windows-x86_64\Lily\</IntDir>
     <TargetName>Lily</TargetName>
     <TargetExt>.dll</TargetExt>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <LinkIncremental>false</LinkIncremental>
-    <OutDir>..\bin\Release-windows-x86_64\Lily\</OutDir>
-    <IntDir>..\bin-int\Release-windows-x86_64\Lily\</IntDir>
+    <OutDir>$(ProjectDir)..\bin\Release-windows-x86_64\Lily\</OutDir>
+    <IntDir>$(ProjectDir)..\bin-int\Release-windows-x86_64\Lily\</IntDir>
     <TargetName>Lily</TargetName>
     <TargetExt>.dll</TargetExt>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Dist|x64'">
     <LinkIncremental>false</LinkIncremental>
-    <OutDir>..\bin\Dist-windows-x86_64\Lily\</OutDir>
-    <IntDir>..\bin-int\Dist-windows-x86_64\Lily\</IntDir>
+    <OutDir>$(ProjectDir)..\bin\Dist-windows-x86_64\Lily\</OutDir>
+    <IntDir>$(ProjectDir)..\bin-int\Dist-windows-x86_64\Lily\</IntDir>
     <TargetName>Lily</TargetName>
     <TargetExt>.dll</TargetExt>
   </PropertyGroup>
@@ -93,6 +93,8 @@
       <AdditionalDependencies>opengl32.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <ImportLibrary>..\bin\Debug-windows-x86_64\Lily\Lily.lib</ImportLibrary>
     </Link>
+    <ProjectReference>
+    </ProjectReference>
     <PostBuildEvent>
       <Command>IF EXIST ..\bin\Debug-windows-x86_64\Lily\Lily.dll\ (xcopy /Q /E /Y /I ..\bin\Debug-windows-x86_64\Lily\Lily.dll "..\bin\Debug-windows-x86_64\Sandbox\" &gt; nul) ELSE (xcopy /Q /Y /I ..\bin\Debug-windows-x86_64\Lily\Lily.dll "..\bin\Debug-windows-x86_64\Sandbox\" &gt; nul)</Command>
     </PostBuildEvent>
@@ -120,6 +122,8 @@
       <AdditionalDependencies>opengl32.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <ImportLibrary>..\bin\Release-windows-x86_64\Lily\Lily.lib</ImportLibrary>
     </Link>
+    <ProjectReference>
+    </ProjectReference>
     <PostBuildEvent>
       <Command>IF EXIST ..\bin\Release-windows-x86_64\Lily\Lily.dll\ (xcopy /Q /E /Y /I ..\bin\Release-windows-x86_64\Lily\Lily.dll "..\bin\Release-windows-x86_64\Sandbox\" &gt; nul) ELSE (xcopy /Q /Y /I ..\bin\Release-windows-x86_64\Lily\Lily.dll "..\bin\Release-windows-x86_64\Sandbox\" &gt; nul)</Command>
     </PostBuildEvent>
@@ -147,6 +151,8 @@
       <AdditionalDependencies>opengl32.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <ImportLibrary>..\bin\Dist-windows-x86_64\Lily\Lily.lib</ImportLibrary>
     </Link>
+    <ProjectReference>
+    </ProjectReference>
     <PostBuildEvent>
       <Command>IF EXIST ..\bin\Dist-windows-x86_64\Lily\Lily.dll\ (xcopy /Q /E /Y /I ..\bin\Dist-windows-x86_64\Lily\Lily.dll "..\bin\Dist-windows-x86_64\Sandbox\" &gt; nul) ELSE (xcopy /Q /Y /I ..\bin\Dist-windows-x86_64\Lily\Lily.dll "..\bin\Dist-windows-x86_64\Sandbox\" &gt; nul)</Command>
     </PostBuildEvent>
@@ -168,7 +174,8 @@
     <ClInclude Include="src\Lily\Log.h" />
     <ClInclude Include="src\Lily\MouseButtonCodes.h" />
     <ClInclude Include="src\Lily\Window.h" />
-    <ClInclude Include="src\Platform\OpenGL\ImGuiOpenGLRenderer.h" />
+    <ClInclude Include="vendor\imgui\backends\imgui_impl_glfw.h" />
+    <ClInclude Include="vendor\imgui\backends\imgui_impl_opengl3.h" />
     <ClInclude Include="src\Platform\Windows\WindowsInput.h" />
     <ClInclude Include="src\Platform\Windows\WindowsWindow.h" />
     <ClInclude Include="src\hzpch.h" />
@@ -595,8 +602,13 @@
     <ClCompile Include="src\Lily\Layer.cpp" />
     <ClCompile Include="src\Lily\LayerStack.cpp" />
     <ClCompile Include="src\Lily\Log.cpp" />
-    <ClCompile Include="src\Platform\OpenGL\ImGuiOpenGLRenderer.cpp" />
     <ClCompile Include="src\Platform\Windows\WindowsInput.cpp" />
+    <ClCompile Include="vendor\imgui\backends\imgui_impl_glfw.cpp">
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="vendor\imgui\backends\imgui_impl_opengl3.cpp">
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+    </ClCompile>
     <ClCompile Include="src\Platform\Windows\WindowsWindow.cpp" />
     <ClCompile Include="src\hzpch.cpp">
       <PrecompiledHeader>Create</PrecompiledHeader>
